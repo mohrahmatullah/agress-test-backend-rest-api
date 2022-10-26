@@ -52,3 +52,29 @@ atau bisa import database dari folder
 ## User Login.
 
 ![login](login.png)
+
+## User Logout.
+
+![logout](logout.png)
+
+## List Product.
+
+![listproduct](listproduct.png)
+
+## Create Product With Body And Token.
+
+![create-product-with-body](create-product-with-body.png)
+
+![create-product-with-token](create-product-with-token.png)
+
+## Update Product With Body And Token.
+
+![update-product-with-body](update-product-with-body.png)
+
+![update-product-with-token](update-product-with-token.png)
+
+## Delete Product With Body And Token.
+
+![delete-product-with-body](delete-product-with-body.png)
+
+![delete-product-with-token](delete-product-with-token.png)
