@@ -31,7 +31,7 @@ $ php artisan migrate
 
 atau bisa import database dari folder
 ```
-	sql/sql.sql
+	sql/agress-test-backend-rest-api.sql
 ```
 
 4. Insomnia
