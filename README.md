@@ -2,7 +2,7 @@
 ```
 	PHP 7.4
 	Laravel 8
-	Mysql 5.7 must support type data JSON
+	Mysql 5.7.36 must support type data JSON
 ```
 
 
