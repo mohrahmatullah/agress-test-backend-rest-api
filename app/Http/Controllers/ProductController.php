@@ -81,17 +81,11 @@ class ProductController extends Controller
         $products->sku                  = $request['sku'];
         $products->brand                = $request['brand'];
         $products->deskripisi           = $request['deskripisi'];
-        $products->variasi              = $request['variasi'];
-        
-        try{
-            $products->save();
+        $products->variasi              = $request['variasi'];        
+        $products->save();
 
-            // Return Data
-            return $products;
-        }catch (Exception $e) {
-            $response = ['code' => 500, 'data' => null, 'msg' => 'error', 'status' => true];
-            return $response;
-        }     
+        // Return Data
+        return $products;    
 
     }
 
@@ -103,17 +97,11 @@ class ProductController extends Controller
         $products->sku                  = $request['sku'];
         $products->brand                = $request['brand'];
         $products->deskripisi           = $request['deskripisi'];
-        $products->variasi              = $request['variasi'];      
+        $products->variasi              = $request['variasi'];
+        $products->save();
 
-        try{
-            $products->save();
-
-            // Return Data
-            return $products;
-        }catch (Exception $e) {
-            $response = ['code' => 500, 'data' => null, 'msg' => 'error', 'status' => true];
-            return $response;
-        }
+        // Return Data
+        return $products;
 
     }
 }
