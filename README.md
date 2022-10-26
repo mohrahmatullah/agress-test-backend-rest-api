@@ -43,3 +43,8 @@ atau bisa import database dari folder
 	insomnia/insomnia..
 
 ```
+
+
+## User Registration, User Login.
+
+![register](register.png)
