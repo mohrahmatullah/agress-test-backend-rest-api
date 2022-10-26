@@ -21,8 +21,8 @@ class AuthController extends Controller
 
         $token = $user->createToken('auth_token')->plainTextToken;
 
-        return response()
-            ->json(['data' => $user,'access_token' => $token, 'token_type' => 'Bearer', ]);
+        // Return Response Data, Akses Token, Type Token
+        return response()->json(['data' => $user,'access_token' => $token, 'token_type' => 'Bearer', ]);
     }
 
     public function login(Request $request)
@@ -30,8 +30,7 @@ class AuthController extends Controller
         // cek auth username & password
         if (!Auth::attempt($request->only('username', 'password')))
         {
-            return response()
-                ->json(['message' => 'Unauthorized'], 401);
+            return response()->json(['message' => 'Unauthorized'], 401);
         }
 
         // get username berdasarkan request
@@ -40,8 +39,8 @@ class AuthController extends Controller
         // create token
         $token = $user->createToken('auth_token')->plainTextToken;
 
-        return response()
-            ->json(['message' => 'Hi '.$user->name.', welcome to home','access_token' => $token, 'token_type' => 'Bearer', ]);
+        // Return Response Message, Akses Token, Type Token
+        return response()->json(['message' => 'Hi '.$user->name.', welcome to home','access_token' => $token, 'token_type' => 'Bearer', ]);
     }
 
     // method for user logout and delete token
