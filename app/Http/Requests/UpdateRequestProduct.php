@@ -24,7 +24,7 @@ class UpdateRequestProduct extends FormRequest
      *
      * @return array
      */
-     public function rules()
+    public function rules()
     {
         return [
             'nama'           => 'required|regex:/(^([a-zA-Z]+)(\d+)?$)/u|min:3'

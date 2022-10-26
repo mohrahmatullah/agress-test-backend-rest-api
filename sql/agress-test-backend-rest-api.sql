@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Oct 26, 2022 at 09:35 AM
+-- Generation Time: Oct 26, 2022 at 10:39 AM
 -- Server version: 5.7.36
 -- PHP Version: 7.4.26
 
@@ -106,8 +106,8 @@ CREATE TABLE IF NOT EXISTS `personal_access_tokens` (
 --
 
 INSERT INTO `personal_access_tokens` (`id`, `tokenable_type`, `tokenable_id`, `name`, `token`, `abilities`, `last_used_at`, `created_at`, `updated_at`) VALUES
-(1, 'App\\Models\\User', 1, 'auth_token', '6a1e6bd7b5506ae5ddb468f35f0d2cbf9871c8c926c501bb199c239e2d0dd71d', '[\"*\"]', NULL, '2022-10-26 02:21:46', '2022-10-26 02:21:46'),
-(2, 'App\\Models\\User', 1, 'auth_token', '9d9562dd0c782f62cef137bf352895147975e4787e8b27ff8b5f41a8dbc384e8', '[\"*\"]', '2022-10-26 02:25:19', '2022-10-26 02:21:52', '2022-10-26 02:25:19');
+(1, 'App\\Models\\User', 1, 'auth_token', '8589cb743751bb51160a1f3367775ee0d601a64a2075abf0b545c20dc3e25f5e', '[\"*\"]', NULL, '2022-10-26 02:46:53', '2022-10-26 02:46:53'),
+(2, 'App\\Models\\User', 1, 'auth_token', '698204163162a37bea9077b210f5b49b727240740a7199b9d7405aeae6917f4c', '[\"*\"]', '2022-10-26 03:36:40', '2022-10-26 02:46:57', '2022-10-26 03:36:40');
 
 -- --------------------------------------------------------
 
@@ -126,7 +126,14 @@ CREATE TABLE IF NOT EXISTS `products` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `products`
+--
+
+INSERT INTO `products` (`id`, `nama`, `sku`, `brand`, `deskripisi`, `variasi`, `created_at`, `updated_at`) VALUES
+(2, 'Minuman', '123456', 'Minuman', 'Minuman Segar', '[{\"sku\": \"123456789\", \"nama\": \"Susu\", \"sale_price\": \"40000\"}, {\"sku\": \"123456789\", \"nama\": \"Air Putih\", \"sale_price\": \"50000\"}]', '2022-10-26 03:11:16', '2022-10-26 03:26:02');
 
 -- --------------------------------------------------------
 
@@ -152,7 +159,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'rahmat', NULL, NULL, '$2y$10$/UYXcRlGg60wJZLwvqyM0.ThfbXcqNkaNrYzNGXCpCRwC6PS1X1Ua', NULL, '2022-10-26 02:21:46', '2022-10-26 02:21:46');
+(1, 'rahmat', NULL, NULL, '$2y$10$SU3IJpWJqyxTlc68YAlIaeC87ow38VK5ZZV1tfDrupVo1B58QPYSy', NULL, '2022-10-26 02:46:53', '2022-10-26 02:46:53');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

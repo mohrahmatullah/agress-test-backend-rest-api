@@ -27,16 +27,19 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function saveUpdate(CreateRequestProduct $createRequest, UpdateRequestProduct $updateRequest)
+    public function saveUpdate(CreateRequestProduct $CreateRequest, UpdateRequestProduct $UpdateRequest)
     {
-        if(isset($updateRequest->id)){
+        $create = $CreateRequest->json()->all();
+        $update = $UpdateRequest->json()->all();
 
-            $products = $this->update($updateRequest);            
+        if(isset($update['id'])){
+
+            $products = $this->update($update);            
             $response = ['code' => 200, 'data' => $products, 'msg' => 'update success', 'status' => true];
 
         }else{
 
-            $products = $this->create($createRequest);
+            $products = $this->create($create);
             $response = ['code' => 200, 'data' => $products, 'msg' => 'save success', 'status' => true];
 
         }
@@ -52,13 +55,14 @@ class ProductController extends Controller
      */
     public function create($request)
     {
+
         $products = new Product;
 
-        $products->nama                 = $request->nama;
-        $products->sku                  = $request->sku;
-        $products->brand                = $request->brand;
-        $products->deskripisi           = $request->deskripisi;
-        $products->variasi              = $request->variasi;
+        $products->nama                 = $request['nama'];
+        $products->sku                  = $request['sku'];
+        $products->brand                = $request['brand'];
+        $products->deskripisi           = $request['deskripisi'];
+        $products->variasi              = $request['variasi'];
         
         try{
             $products->save();
@@ -72,13 +76,13 @@ class ProductController extends Controller
 
     public function update($request)
     {
-        $products = Product::find($request->id);
+        $products = Product::find($request['id']);
 
-        $products->nama                 = $request->nama;
-        $products->sku                  = $request->sku;
-        $products->brand                = $request->brand;
-        $products->deskripisi           = $request->deskripisi;
-        $products->variasi              = $request->variasi;       
+        $products->nama                 = $request['nama'];
+        $products->sku                  = $request['sku'];
+        $products->brand                = $request['brand'];
+        $products->deskripisi           = $request['deskripisi'];
+        $products->variasi              = $request['variasi'];      
 
         try{
             $products->save();
