@@ -1,7 +1,10 @@
 # Requirements
+```
+	PHP 7.4
+	Laravel 8
+	Mysql 5.7 must support type data JSON
+```
 
-PHP 7.4
-Laravel 8
 
 # Installation
 
