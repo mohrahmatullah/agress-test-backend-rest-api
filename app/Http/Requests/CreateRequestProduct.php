@@ -27,7 +27,7 @@ class CreateRequestProduct extends FormRequest
     public function rules()
     {
         return [
-            'nama'           => 'required|regex:/(^([a-zA-Z]+)(\d+)?$)/u|min:3|unique:products'
+            'nama'           => 'required|regex:/(^([a-zA-Z]+)(\d+)?$)/u|min:3'
         ];
 
     }
